@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta rel="preload" href="images/back.jpg" as="image"/>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,600" rel="stylesheet" type="text/css">
+        <link type="text/css" rel="stylesheet" href="css/style.css">
+        <link rel="icon" href="images/favicon.png"/>
+        
+        
+        <title>DiceToWin</title>
+    </head>
+
+    <body>
+        
+        <div class="allAudioElements">
+            <audio  id="rollDiceSound">
+                <source src="audio/roll-dice-click-sound.mp3"  type="audio/mp3">
+            </audio>
+            <audio  id="playerWins" >
+                <source src="audio/coffin-song.mp3" type="audio/mp3">
+            </audio>
+            <audio  id="newGameIntro">
+                <source src="audio/game-intro-audio.mp3"  type="audio/mp3">
+            </audio>  
+        </div>
+        <!--The main wrapper that contains all the contenst of body-->
+        <div class="wrapper clearfix">
+
+            <!--Player-1 configuration-->
+            <div class="player-0-panel active">
+
+                <!--Player-1 name-->
+            <div class="player-name" id="name-0" >Player 1</div>
+
+                <!--Player-1 Global score-->
+                <div class="player-score" id="score-0">0</div>
+
+                <div class="player-current-box player-0_box">
+                    <div class="player-current-label">Current</div>
+
+                    <!--Player-1 Current Score-->
+                    <div class="player-current-score" id="current-0">0</div>
+                </div>
+            </div>
+            
+            <!--Player-2 configuration-->
+            <div class="player-1-panel">
+
+                <!--Player-2 name-->
+                <div class="player-name" id="name-1" >Player 2</div>
+
+                  <!--Player-2 Global Score-->
+                <div class="player-score" id="score-1">0</div>
+                <div class="player-current-box player-1_box">
+                    <div class="player-current-label">Current</div>
+
+                      <!--Player-2 Current Score-->
+                    <div class="player-current-score" id="current-1">0</div>
+                </div>
+            </div>
+                
+            <!--Button to start a new game-->
+            <button class="btn-new">
+                <span >&circledast;</span>
+                New game
+            </button>
+
+             <!--Button to Roll the dice-->
+            <button class="btn-roll">
+                <span >&clubsuit;</span>
+                Roll dice
+            </button>
+
+             <!--Button to Hold the game and pass the chance to next player-->
+            <button class="btn-hold">
+                <span >&rarr;</span>
+                Pass
+            </button>
+            
+            <!--Dice image-->
+            <img src="images/favicon.png" class="dice-img"/>
+        </div>
+    </body>
+    <!--Game logic resides here.
+            The most precious file.
+            The Chamber of secrets
+        -->
+        <script src="js/app.js"></script>
+</html>
